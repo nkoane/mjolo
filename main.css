@@ -36,6 +36,7 @@ main div.ball {
 
     50% {
         transform: translate(100%, -100%);
+        background-color: #fff;
     }
 }
 
