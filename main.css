@@ -3,22 +3,37 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-}
-main {
-    background-color: #f6f6f6;
     height: 100vh;
     width: 100vw;
     display: grid;
     place-items: center;
+}
+main {
+    background-color: #f6f6f6;
+    position: relative;
 }
 
 main div {
     width: 50px;
     aspect-ratio: 1/1;
     background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
 }
 
 main div.ball {
     background-color: orange;
     border-radius: 50%;
+    animation: aaliyah 2s infinite;
+}
+@keyframes aaliyah {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-100%, 0);
+    }
 }
