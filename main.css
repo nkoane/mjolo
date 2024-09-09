@@ -20,14 +20,17 @@ main div {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.4;
+    z-index: 100;
 }
 
+main.square {
+}
 main div.ball {
     background-color: orange;
     border-radius: 50%;
     transform: translate(-100%, 0);
     animation: aaliyah 2s infinite;
+    z-index: 100;
 }
 @keyframes aaliyah {
     0% {
@@ -36,5 +39,24 @@ main div.ball {
 
     50% {
         transform: translate(100%, 0);
+    }
+}
+
+main div.square {
+    z-index: 50;
+    animation: cremora 2s infinite;
+}
+@keyframes cremora {
+    0% {
+        z-index: 50;
+    }
+    49% {
+        z-index: 50;
+    }
+    50% {
+        z-index: 150;
+    }
+    100% {
+        z-index: 150;
     }
 }
